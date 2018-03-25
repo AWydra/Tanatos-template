@@ -7,14 +7,15 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&amp;subset=latin-ext" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body>
+<body id="scrollbar">
     <header class="page_header">
        <div>
         <nav id="menu">
             <!-- Logo -->
             <a href="#"><img src="assets/img/logo.png" alt="Company XYZ"></a>
-
+            
             <!-- Hamburger -->
             <div class="header_nav--container">
                 <div class="header_nav--content">Menu</div>
@@ -24,6 +25,20 @@
                     <span></span>
                 </div>
             </div>
+            <nav id="header_nav--menu" class="hidden">
+                <a class="hidden click" href="#">home</a>
+                <a class="hidden click" href="#">about us</a>
+                <a class="hidden click" href="#">services</a>
+                <a class="hidden click" href="#ourworks">our works</a>
+                <a class="hidden click border" href="#">contact</a>
+                <div class="hidden link_container">   
+                    <a class="hidden click" href="#"><img src="assets/img/form1.png" alt=""></a>
+                    <a class="hidden click" href="#"><img src="assets/img/form2.png" alt=""></a>
+                    <a class="hidden click" href="#"><img src="assets/img/form3.png" alt=""></a>
+                    <a class="hidden click" href="#"><img src="assets/img/form4.png" alt=""></a>
+                    <a class="hidden click" href="#"><img src="assets/img/form5.png" alt=""></a>
+                </div>
+            </nav>
         </nav>
         <section class="intro_section">
             <h1>WE DESIGN <span>THINGS</span></h1>
@@ -31,8 +46,8 @@
             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
             </p>
             <div class="intro_section--buttonContainer">
-            <a href="#" class="intro_section--button" id="intro_section--button1">hire us</a>
-            <a href="#" class="intro_section--button">our works</a>
+            <a href="#contact" class="intro_section--button" id="intro_section--button1">hire us</a>
+            <a href="#ourworks" class="intro_section--button">our works</a>
             </div>
             <div class="intro_section--arrowDownContainer">
                 <a href="#featureBox" class="intro_section--arrowDown">
@@ -80,7 +95,7 @@
             </form>
         </div>
     </section>
-    <section class="ourworks">
+    <section class="ourworks" id="ourworks">
         <header class="ourworks_header">
            <h2>our
                <span> works</span>
@@ -210,7 +225,7 @@
            </article>
        </section>
    </section>
-    <section class="contact">
+    <section class="contact" id="contact">
        <div>
            <header class="contact_header">
                <h2>
@@ -229,11 +244,11 @@
                    <!--     resize: none; -->
                     <input type="submit" value="HIRE US">
                     <div class="form_img">
-                        <a href="#"><img src="assets/img/form1.png" alt="Our Facebook"></a>
-                        <a href="#"><img src="assets/img/form2.png" alt="Our Tweeter"></a>
-                        <a href="#"><img src="assets/img/form3.png" alt="Our Google+"></a>
-                        <a href="#"><img src="assets/img/form4.png" alt="Our Circle(?)"></a>
-                        <a href="#"><img src="assets/img/form5.png" alt="Our Behance"></a>
+                        <a href="#contact"><img src="assets/img/form1.png" alt="Our Facebook"></a>
+                        <a href="#contact"><img src="assets/img/form2.png" alt="Our Tweeter"></a>
+                        <a href="#contact"><img src="assets/img/form3.png" alt="Our Google+"></a>
+                        <a href="#contact"><img src="assets/img/form4.png" alt="Our Circle(?)"></a>
+                        <a href="#contact"><img src="assets/img/form5.png" alt="Our Behance"></a>
                     </div>
                </form>
            </article>
@@ -241,7 +256,7 @@
    </section>
     <footer class="page_footer">
        <p>
-           &copy; 2018 COPYRIGHT <a href="awydra.pl">AWydra</a>
+           &copy; 2018 COPYRIGHT <a href="https://github.com/AWydra">AWydra</a>
        </p>
        <p>
            DESIGNED BY
@@ -252,5 +267,6 @@
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="assets/js/smoothAnchor.js"></script>
 <script src="assets/js/hamburger.js"></script>
+<script src="assets/js/active.js"></script>
 </body>
 </html>
