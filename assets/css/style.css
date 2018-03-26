@@ -8,21 +8,96 @@
 
 /* SCROLL */
 
-#scrollbar::-webkit-scrollbar-track{
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-	border-radius: 10px;
-	background-color: rgba(0,0,0,0);
+#scroll::-webkit-scrollbar{
+	display: none;
 }
 
-#scrollbar::-webkit-scrollbar{
-	width: 12px;
-	background-color: rgba(0,0,0,0);
+.scroll {
+      height: 1vh;
+      width: 0%;
+      background-color: #f7600e;
+      transition: 0.3s linear;
+      position: fixed;
+      top: 0;
+      left: 0;
+    z-index: 999999999999999999999999999999999999999999;
+    }
+
+/* ANIMATIONS */
+
+@-webkit-keyframes fadeInDownBig {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -2000px, 0);
+    transform: translate3d(0, -2000px, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
 }
 
-#scrollbar::-webkit-scrollbar-thumb{
-	border-radius: 10px;
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-	background-color: #f7600e;
+@keyframes fadeInDownBig {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -2000px, 0);
+    transform: translate3d(0, -2000px, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInDownBig {
+  -webkit-animation-name: fadeInDownBig;
+  animation-name: fadeInDownBig;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeOutUpBig {
+  from {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -2000px, 0);
+    transform: translate3d(0, -2000px, 0);
+  }
+}
+
+@keyframes fadeOutUpBig {
+  from {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -2000px, 0);
+    transform: translate3d(0, -2000px, 0);
+  }
+}
+
+.fadeOutUpBig {
+  -webkit-animation-name: fadeOutUpBig;
+  animation-name: fadeOutUpBig;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  transition: all 2s ease-in-out;
 }
 
 /* HEADER */
@@ -255,6 +330,8 @@
 nav.hidden{
     display: none;
     position: absolute;
+    width: 100vw;
+    height: 100vh;
 }
 
 nav.active{
@@ -266,7 +343,7 @@ nav.active{
     width: 100%;
     height: 100vh;
     background-color: #3b434c;
-    opacity: 0.9;
+    opacity: 1;
     overflow: hidden;
 }
 
@@ -315,7 +392,7 @@ a.active{
 }
 
 .link_container a{
-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
 .link_container a:hover{

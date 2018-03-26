@@ -3,6 +3,8 @@ $(document).ready(function(){
 		$('nav#header_nav--menu').toggleClass('active');
         $('body').toggleClass('active_body');
         $('a.hidden').toggleClass('active');
+        $('nav#header_nav--menu').toggleClass('fadeInDownBig');
+        $('nav#header_nav--menu').toggleClass('fadeOutUpBig');
 	});
 	$('.click').click(function(){
         $('nav#header_nav--menu').toggleClass('active');
