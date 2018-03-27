@@ -13,7 +13,7 @@
 }
 
 .scroll {
-      height: 1vh;
+      height: 0.5vh;
       width: 0%;
       background-color: #f7600e;
       transition: 0.3s linear;
@@ -139,9 +139,10 @@
     color: #ffffff;
     font-size: 3.5em;
     font-weight: 700;
-    line-height: 16.8px;
     text-transform: uppercase;
     padding-bottom: 3%;
+    padding: 30px;
+    text-align: center;
 }
 
 .intro_section h1 span{
@@ -149,14 +150,13 @@
 }
 
 .intro_section p {
-    width: 774px;
-    height: 65px;
+    width: 80%;
+    height: auto;
     color: #ffffff;
     font-size: 17px;
     font-weight: 400;
-    line-height: 25px;
     text-align: center;
-    padding-bottom: 5%;
+    padding-bottom: 4%;
 }
 
 .intro_section--buttonContainer{
@@ -164,8 +164,8 @@
 }
 
 .intro_section--button {
-    margin: 0 10px;
-    padding: 10px 60px;
+    margin: 10px 25px;
+    padding: 4px 60px;
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.2);
     text-decoration: none;
@@ -175,6 +175,7 @@
     line-height: 40px;
     text-transform: uppercase;
     transition: all 0.2s ease-in-out;
+    white-space: nowrap;
 }
 
 .intro_section--button:hover{
@@ -407,11 +408,16 @@ a.active{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .featureBox_item{
     width: 20%;
     margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .featureBox_item--imageContainter{
@@ -428,11 +434,11 @@ a.active{
 
 .featureBox_item h3 {
     color: #3b434c;
-    font-size: 1.5em;
+    font-size: 1.7em;
     font-weight: 400;
-    line-height: 40px;
     text-transform: uppercase;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 .featureBox_item p {
@@ -503,7 +509,7 @@ a.active{
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 300px;
+    height: 400px;
 }
 
 .ourworks_header h2{
@@ -681,7 +687,7 @@ a.active{
     font-style: italic;
     line-height: 40px;
     font-weight: 400;
-    padding: 50px 0 40px 0;
+    padding: 50px 30px 40px 30px;
     text-align: center;
 }
 
@@ -770,7 +776,6 @@ a.active{
     color: #3b434c;
     font-size: 1.6em;
     font-weight: 600;
-    line-height: 10px;
     text-transform: uppercase;
 }
 
@@ -956,4 +961,215 @@ a.active{
     text-transform: none;
     text-decoration: none;
     color: white;
+}
+
+/* RESPONSIVE */
+
+@media only screen and (max-width: 1145px){
+    
+    .featureBox{
+        height: 100%;
+    }
+    
+    .featureBox_item {
+        width: 34%;
+        margin: 70px 50px;
+    }
+    
+    .featureBox_item p{
+        width: 200%;
+        margin-top: 10px;
+    }
+    
+    .team{
+        height: 100%;
+    }
+    
+    .member{
+        min-width: 40vw;
+        max-width: 41vw;
+        padding-bottom: 60px;
+    }
+    
+    .member p{
+        width: 100%;
+        text-align: center;
+    }
+    
+    .subscribe{
+        height: 17vh;
+    }
+    
+    .ourworks_container{
+        margin: 5%;
+    }
+    
+}
+
+
+@media only screen and (max-width: 1335px){
+    
+    .ourworks_container {
+        margin: 4% 3%;
+    }
+    
+    
+}
+
+@media only screen and (max-width: 767px){
+    .subscribe_container input {
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 838px){
+    
+    .ourworks_container {
+        width: 50vw;  
+    }
+}
+
+@media only screen and (max-width: 748px){
+    
+    #input_container input[name="name"], #input_container input[name="subject"]{
+        width: 100%;
+        margin: 15px;
+    }
+    
+    #input_container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .contact_form textarea{
+        margin: 15px 0;
+    }
+    
+    .form_img{
+        display: none;
+    }
+    
+    .contact_form input[value="HIRE US"]{
+        display: block;
+        margin: 0 auto 30px;
+        float: none;
+        width: 60%;
+    }
+}
+
+
+@media only screen and (max-width: 624px){
+    .featureBox_item--imageContainter{
+        width: 34vw;
+        height: 34vw;
+        margin: 0 0 20px 0;
+    }
+    
+    .featureBox_item--imageContainter img{
+        max-width: 50px;
+        max-height: 50px; 
+    }
+    
+}
+
+@media only screen and (max-width: 496px){
+    .slider{
+        height: 100vh;
+    }
+    
+    .header_nav--content{
+        display: none !important;
+    }
+    
+    .scroll{
+        display: none;
+    }
+    
+    .ourworks_main{
+        margin-top: 50px;
+    }
+    
+}
+
+@media only screen and (max-width: 593px){
+    
+    .page_header{
+        height: 100%;
+    }
+    
+    .ourworks_header h2{
+        margin: 100px 0 0 0;
+    }
+    
+    .ourworks_header p{
+        margin-bottom: 100px;
+    }
+    
+    #intro_section--button2{
+        margin-bottom: 40px;
+    }
+}
+
+@media only screen and (max-width: 368px){
+    .intro_section h1{
+        margin-top: 90px;
+    }
+    
+    .intro_section{
+        height: 100vh;
+    }
+    
+    .ourworks_container{
+        width: 70vw;
+    }
+}
+
+@media only screen and (max-width: 535px){
+    .intro_section--buttonContainer{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    
+    #intro_section--button1 {
+    padding: 4px 77px;
+    }
+    
+    .intro_section--arrowDown{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 569px){
+    .subscribe_container form{
+        flex-direction: column;
+    }
+    
+    .subscribe_container input{
+        width: 70%;
+        margin: 20px 0 10px;
+    }
+    
+    .subscribe_container button{
+        width: 40%;
+        display: block;
+        margin: 10px 0 20px;
+    }
+    
+    .subscribe{
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 521px){
+    .page_footer{
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .page_footer p{
+        padding: 5px 0;
+    }
 }
