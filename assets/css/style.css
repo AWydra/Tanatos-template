@@ -119,7 +119,7 @@ html {
 }
 
 .page_header > div{
-    height: 100vh;
+    height: 100%;
     background-color: #3b434c;
     background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
     background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
@@ -1370,11 +1370,15 @@ a.active{
     
     
     #intro_section--button1 {
-    padding: 4px 77px;
+    padding: 10px 77px;
     }
     
     .intro_section--arrowDown{
         display: none;
+    }
+    
+    .page_header{
+    height: calc(100vh + 50px);
     }
 }
 
