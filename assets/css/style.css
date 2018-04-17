@@ -918,6 +918,8 @@ a.active{
 .member > img{
     width: 235px;
     height: 285px;
+    filter: saturate(0);
+    -webkit-filter: saturate(0);    
 }
 
 .member p{
@@ -966,11 +968,14 @@ a.active{
 .member:hover .teamContainer{
     -webkit-filter: grayscale(0);
     filter: grayscale(0);
+    
 }
 
 .member:hover > img{
     border-radius: 5px;
     border-bottom: 5px solid #f7600e;
+    filter: saturate(1);
+    -webkit-filter: saturate(1);
 }
 
 
