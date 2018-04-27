@@ -6,4 +6,6 @@
 	$headers = 'From:' . $name;
 	
 	mail($to, $subject, $message, $headers);
+
+    echo file_get_contents('index.html');
 ?>
